@@ -9,7 +9,7 @@ export default async function MenPage() {
 
   return (
     <div className="p-10">
-      <h1 className="text-3xl font-bold">Men's Collection</h1>
+      <h1 className="text-3xl font-bold">Mens Collection</h1>
       {/* Your content here */}
     </div>
   );
