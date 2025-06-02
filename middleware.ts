@@ -31,9 +31,6 @@ export function middleware(request: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
-  // Default to /home for encasr.com or unknown subdomain
-  url.pathname = '/home';
-  return NextResponse.rewrite(url);
 }
 
 export const config = {
