@@ -28,11 +28,11 @@ export const ThemeFloatingToggle = () => {
       <AnimatePresence mode="wait" initial={false}>
         <motion.span
           key={isMen ? "men" : "women"}
-          initial={{ opacity: 0, scale: 0.8, rotate: -15 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          initial={{ opacity: 0, scale: 0.7, rotate: -15 }}
+          animate={{ opacity: 1, scale: 1.15, rotate: 0 }}
           exit={{ opacity: 0, scale: 0.6, rotate: 15 }}
           transition={{ duration: 0.3 }}
-          className={`text-xl font-semibold ${
+          className={`text-2xl font-semibold ${
             isMen ? "text-blue-400" : "text-pink-600"
           }`}
         >

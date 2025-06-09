@@ -42,7 +42,7 @@ export const Header = () => {
         showHeader ? "translate-y-0" : "-translate-y-32"
       }`}
     >
-      <div className="flex items-center justify-between px-6 py-3 rounded-2xl backdrop-blur-md bg-white/10 shadow-md border border-white/20">
+      <div className="flex items-center justify-between px-6 py-3 rounded-2xl backdrop-blur-md bg-white/10 shadow-md border border-white/20 women:border-pink-500/20">
         {/* Left: Logo */}
         <div className="hidden md:flex items-center mr-6">
           <Image src={Logo} alt="Encasr Logo" className="h-8 w-auto" />
