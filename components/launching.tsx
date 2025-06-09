@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface AnimatedGradientBackgroundProps {
     className?: string;
@@ -212,6 +213,15 @@ export default function BeamsBackground({
                     >
                         Launching Soon
                     </motion.p>
+                    <motion.div
+                    className="text-lg md:text-2xl lg:text-3xl text-white/70 tracking-tighter"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}>
+                            <Link href={"/men"} >
+                            Men
+                            </Link>
+                    </motion.div>
                 </div>
             </div>
         </div>
