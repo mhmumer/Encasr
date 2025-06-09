@@ -1,7 +1,8 @@
 "use client";
+
 import React from "react";
 import { useTheme } from "@/contexts/ThemeContext";
-import { User, UserRound } from "lucide-react";
+import { UserCog, Heart } from "lucide-react";
 
 export const ThemeFloatingToggle = () => {
   const { theme, toggleTheme } = useTheme();
@@ -12,11 +13,36 @@ export const ThemeFloatingToggle = () => {
     <button
       onClick={toggleTheme}
       aria-label="Toggle Theme"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full backdrop-blur-lg bg-white/20 shadow-lg border border-white/30 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-2xl
-        text-blue-400 border-blue-500  hover:text-white
-        women:text-pink-500 women:border-pink-300  women:hover:text-white"
+      className={`
+        fixed bottom-4 right-4 z-50 w-[4rem] h-[4rem] rounded-full
+        flex items-center justify-center
+        transition-all duration-500 ease-in-out
+        backdrop-blur-2xl shadow-2xl overflow-hidden
+        border border-transparent hover:scale-110 active:scale-95 group
+        ${
+          isMen
+            ? "bg-gradient-to-br from-blue-400/20 via-blue-200/10 to-white/10 border-blue-300/40"
+            : "bg-gradient-to-br from-pink-400/20 via-pink-300/10 to-white/10 border-pink-300/40"
+        }
+      `}
     >
-      {isMen ? <User className="w-6 h-6" /> : <UserRound className="w-5 h-5" />}
+      {/* Glow layer */}
+      <div
+        className={`absolute inset-0 blur-xl opacity-40 rounded-full transition-all duration-500 ${
+          isMen
+            ? "bg-gradient-to-br from-blue-500 via-sky-300 to-white"
+            : "bg-gradient-to-br from-pink-500 via-pink-300 to-white"
+        }`}
+      />
+
+      {/* Icon layer */}
+      <span className="relative z-10 transition-transform duration-300 scale-100 group-hover:scale-110">
+        {isMen ? (
+          <UserCog className="w-6 h-6 text-blue-300 group-hover:text-blue-100" />
+        ) : (
+          <Heart className="w-6 h-6 text-pink-400 group-hover:text-pink-200" />
+        )}
+      </span>
     </button>
   );
 };
