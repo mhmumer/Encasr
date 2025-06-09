@@ -10,6 +10,15 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  // ✅ Disable `no-require-imports` in generated Prisma files
+  {
+    files: ["prisma/generated/**"],
+    rules: {
+      "@typescript-eslint/no-require-imports": "off",
+    },
+  },
+
+  // Existing Next.js + TypeScript compatibility config
   ...compat.extends("next/core-web-vitals", "next/typescript"),
 ];
 

@@ -1,13 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import { useTheme } from "@/contexts/ThemeContext";
+// import Link from "next/link";
+// import { useTheme } from "@/contexts/ThemeContext";
 import { ShoppingCart, Menu } from "lucide-react";
 import Logo from "@/assets/logo.png";
 import Image from "next/image";
 
 export const Header = () => {
-  const { toggleTheme } = useTheme();
+  
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 

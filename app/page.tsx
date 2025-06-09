@@ -1,13 +1,9 @@
-'use client';
 
 
-import Card08 from "@/components/BorderBeam";
 
-import { BlurReveal } from "@/components/ui/blur-reveal"; 
-import Logo from "@/assets/logo.png";
-import Image from "next/image";
-import Vanguard from "@/assets/vanguard.png";
-import { Link } from "lucide-react";
+
+
+
 
 export default function Home() {
   return (
